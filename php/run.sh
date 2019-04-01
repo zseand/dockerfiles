@@ -1,0 +1,1 @@
+docker run -d --restart=always -p 80:80 -v /var/www/html:/var/www/html php
