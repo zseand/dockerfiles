@@ -1,1 +1,1 @@
-docker run -d --restart=always -p 80:80 -v /var/www/html:/var/www/html php
+docker run -d --restart=always -p 3333:80 -v /home/doki/projektek/game-engine/php:/var/www/html -v /var/www/apache2.conf:/etc/apache2/apache2.conf php
