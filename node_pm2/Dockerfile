@@ -1,5 +1,5 @@
 FROM ubuntu
-
+ARG DEBIAN_FRONTEND=noninteractive
 MAINTAINER "Zsebe András <zsebeandrastamas@gmail.com>"
 
 RUN apt-get update
@@ -12,9 +12,7 @@ RUN node -v
 RUN apt-get install -y mc
 RUN apt-get install -y git
 RUN apt-get install -y ffmpeg
-RUN apt-get install -y lm-sensors && sensors-detect --auto
 
-#RUN npm install Unitech/pm2#development -g
 RUN npm -v
 RUN npm install -g pm2
 RUN npm install -g google-closure-compiler
