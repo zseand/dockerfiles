@@ -1,0 +1,1 @@
+docker run -d --restart always -p 8000:8000 -v /var/www/codiad/workspace/game-engine:/home/doki/projektek/game-engine engine
