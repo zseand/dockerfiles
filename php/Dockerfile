@@ -40,12 +40,12 @@ RUN apt-get install -y --fix-missing unzip
 RUN apt-get install -y --fix-missing zip
 #RUN apt-get install -y --fix-missing rar
 RUN apt-get install -y --fix-missing unrar
-RUN apt-get install -y --fix-missing php7.2-gmp
+#RUN apt-get install -y --fix-missing php7.2-gmp
 RUN apt-get install -y --fix-missing php7.2-mongodb
 RUN apt-get install -y --fix-missing php-bcmath
 RUN apt-get install -y software-properties-common
 RUN pecl install mongodb
-RUN echo "extension=mongodb.so" >> /etc/php/7.2/apache2/php.ini
+#RUN echo "extension=mongodb.so" >> /etc/php/7.2/apache2/php.ini
 
 WORKDIR /tmp
 RUN cd /tmp
