@@ -6,6 +6,8 @@ MAINTAINER Zsebe András
 
 RUN apt-get update
 
+RUN apt-get install -y --fix-missing apache2
+COPY apache2.conf /etc/apache2/apache2.conf
 RUN apt-get install -y --fix-missing git
 RUN apt-get install -y --fix-missing php 
 RUN apt-get install -y --fix-missing php-intl 
@@ -45,7 +47,7 @@ RUN apt-get install -y --fix-missing php-mongodb
 RUN apt-get install -y --fix-missing php-bcmath
 RUN apt-get install -y software-properties-common
 RUN pecl install mongodb
-RUN echo "extension=mongodb.so" >> /etc/php/7.4/apache2/php.ini
+#RUN echo "extension=mongodb.so" >> /etc/php/7.4/apache2/php.ini
 
 WORKDIR /tmp
 RUN cd /tmp
