@@ -6,13 +6,13 @@ RUN apt-get update
 RUN apt -y install curl wget dirmngr apt-transport-https lsb-release ca-certificates
 RUN apt -y install gcc g++ make
 WORKDIR /tmp
-RUN curl -sL https://deb.nodesource.com/setup_13.x | bash - && apt-get update && apt-get upgrade -y && apt-get install -y nodejs
+RUN curl -sL https://deb.nodesource.com/setup_14.x | bash - && apt-get update && apt-get upgrade -y && apt-get install -y nodejs
 RUN node -v
 
 RUN apt-get install -y mc
 RUN apt-get install -y git
 RUN apt-get install -y ffmpeg
-RUN apt-get install -y lm-sensors && sensors-detect --auto
+#RUN apt-get install -y lm-sensors && sensors-detect --auto
 
 RUN npm -v
 RUN npm install -g pm2
