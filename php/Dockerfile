@@ -2,8 +2,6 @@ FROM ubuntu
 
 ARG DEBIAN_FRONTEND=noninteractive
 
-MAINTAINER Zsebe András
-
 RUN apt-get update
 
 RUN apt-get install -y --fix-missing apache2

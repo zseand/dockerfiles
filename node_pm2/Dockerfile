@@ -1,6 +1,5 @@
 FROM ubuntu
 ARG DEBIAN_FRONTEND=noninteractive
-MAINTAINER "Zsebe András <zsebeandrastamas@gmail.com>"
 
 RUN apt-get update
 RUN apt -y install curl wget dirmngr apt-transport-https lsb-release ca-certificates
